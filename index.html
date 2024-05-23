@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>El Club de la Milanesa - Miami</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo-fav.svg" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="TwboXits6-Vp2lwUv8m9wDt2Gy_4QawpAc2YEPVAeAxrvYzLGJm6y1OTyakCS_hr0ibGkHSIWM5F4pzCnh-Nfw" />
+    
+
+    <link rel="stylesheet" href="assets/application.css" data-turbo-track="reload" />
+
+    
+  </head>
+
+  <body>
+    <div class="banner">
+
+        <div class="logo">
+            <a href="index.html">
+            <img alt="Logo" class="logo-svg" src="assets/elclubmila.svg" />
+            </a>
+        </div>
+        <div>
+            <h2 style="font-weight:700">WE ARE<br>OPEN</h2>
+        </div>
+        <div class="botones">
+            <a href="https://www.opentable.com/r/el-club-de-la-milanesa-miami?corrid=539d07d4-493a-44c8-9ecc-cabe4447bf65&avt=eyJ2IjoyLCJtIjowLCJwIjowLCJzIjowLCJuIjowfQ&p=2&sd=2024-04-11T19%3A00%3A00" class="boton-marron" target="_blank">BOOK YOUR TABLE</a>
+            <a href="menu.pdf" class="boton-marron" target="_blank">OUR MENU</a>
+            <a href="index.html#where-to-find-us" class="boton-marron">LOCATION</a>
+        </div>
+        
+</div>
+
+<div class="black-bg" id="join-our-team">
+    <div class="join-our-team">
+    <h3>ARE YOU READY TO BE PART OF THE CLUB?</h3>
+    <p>We're on the lookout for ambitious individuals who share our pride in our work and want to make a positive impact in the community.
+    <br>
+    <br>
+    <p><strong>Find the role that suits you best and join us in our journey of growth.</strong></p>
+    <br>
+    <a href="mailto:teams@elclubdelamilanesa.com?subject=JOIN OUR TEAM&body=Hola, estaba interesad@ para unirme al equipo." class="boton-negro">JOIN OUR TEAM</a>
+
+</div>
+    <div class="where-to-find-us" id="where-to-find-us">
+    <h3>WHERE TO FIND US</h3>
+    <div class="info-container">
+        <a href="https://www.google.com/maps?q=25.80791195202862,-80.1934458457612&ll=25.80791195202862,-80.1934458457612&z=17"  target="_blank">
+
+        <h4 class="info-text left-text">
+            3252 BUENA VISTA BLVD<br>MIAMI, FL 33137
+            <img alt="Map Pin" class="icon" src="assets/map-pin_2.svg" />
+        </h4>
+        </a>
+        <p>/</p>
+        <h4 class="info-text right-text">
+            MONDAY TO MONDAY<br>
+            <img alt="Clock" class="icon" src="assets/clock_1.svg" />
+            12PM TO 12AM
+        </h4>
+    </div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map').setView([25.80791195202862, -80.1934458457612], 13);
+        map.setZoom(16); // Establece el nivel de zoom a 16
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: ''
+        }).addTo(map);
+
+        var marker = L.marker([25.80791195202862, -80.1934458457612]).addTo(map);
+        // Agrega este evento de clic al marcador
+        marker.on('click', function(e) {
+            var lat = e.latlng.lat;
+            var lng = e.latlng.lng;
+            // Construye la URL de Google Maps para estas coordenadas
+            var googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}&ll=${lat},${lng}&z=17`;
+            // Abre Google Maps en una nueva pestaña
+            window.open(googleMapsUrl, '_blank');
+        });
+    </script>
+</div>
+
+
+</div>
+
+<div class="container">
+<footer class="footer">
+    <div class="footer-right">
+        <a href="index.html#" class="vaquita-link">
+            <img alt="Logo" class="vaquita" src="assets/logo-footer.svg" />
+        </a>
+
+        <div class="social-media">
+        <a href="https://wa.me/17869357764"><img alt="Whatsapp" src="assets/whatsapp.svg" /> +1 (786) 935-7764</a>
+        <a href="https://www.instagram.com/elclubdelamilanesa.us/"><img alt="Instagram" src="assets/instagram.svg" /> @ELCLUBDELAMILANESA.US</a>  
+        </div>             
+    </div>
+    <div class="footer-left">
+        <a href="index.html#"><img alt="Logo" class="logo-footer" src="assets/elclubmila-black.svg" /></a>
+        <p>PREMIUM ARGENTINE BEEF CUTLETS. TENDER. BREADED. CRISPY.</p>
+    </div>
+</footer>
+</div>
+
+  </body>
+</html>
